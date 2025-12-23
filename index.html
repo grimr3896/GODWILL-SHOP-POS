@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Godwill Shop POS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F9FAFB',
+            sidebar: '#1A1A1A',
+            urgency: '#FF6D1F',
+            teal: '#2D9C91',
+            card: '#FFFFFF',
+            border: '#E5E7EB'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F9FAFB;
+      color: #111827;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .dark-sidebar {
+      background-color: #1A1A1A;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 10px;
+    }
+    
+    /* THERMAL RECEIPT STYLING */
+    .thermal-paper {
+      background: white;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 320px; /* Standard 80mm roughly */
+      margin: 0 auto;
+      padding: 24px;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* PRINTING STYLES - Optimized for Instant Spooling */
+    @media print {
+      /* Remove browser default headers and footers */
+      @page {
+        margin: 0 !important;
+        size: 80mm auto;
+      }
+      
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .thermal-paper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 5px !important; /* Tight padding for thermal rolls */
+        width: 100% !important;
+        max-width: 80mm !important;
+        page-break-after: always;
+      }
+      body {
+        background-color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 80mm !important; /* Force width */
+      }
+      /* Ensure text doesn't look blurry on low-res thermal heads */
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-rendering: optimizeLegibility;
+      }
+    }
+    .print-only {
+      display: none;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

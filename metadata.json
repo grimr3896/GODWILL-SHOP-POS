@@ -1,0 +1,7 @@
+{
+  "name": "Godwill Shop POS",
+  "description": "A high-performance retail and wholesale POS system with automated pricing logic, real-time inventory tracking, and robust financial reporting.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
