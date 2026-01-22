@@ -156,3 +156,12 @@ This is not a demo POS — it’s a **real systems engineering project**.
 - Agro-vet stores
 - Hardware shops
 - High-volume cash businesses
+- ## Running the Application
+
+Once opened in a code editor, open the terminal and run these commands:
+
+## npm install
+
+## npm run dev
+
+## npm start
