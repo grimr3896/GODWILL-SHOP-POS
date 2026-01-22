@@ -1,7 +1,3 @@
-Alright — here’s a **proper, professional README** you can drop straight into the repo.
-Not marketing fluff. This reads like a **serious system built by someone who understands retail reality**.
-
----
 
 # GODWILL SHOP POS
 
